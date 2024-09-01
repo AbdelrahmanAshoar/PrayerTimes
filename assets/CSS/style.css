@@ -1,0 +1,133 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+}
+
+:root{
+  --primaryColor: #1A5319;
+}
+
+body{
+  background-color: #80AF81;
+}
+
+.container{
+  max-width: 95%;
+  background-color: #D6EFD8;
+}
+
+h1{
+  font-size: 80px;
+  padding-block: 40px 60px;
+  color: var(--primaryColor);
+  font-family: "Aref Ruqaa Ink", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* location */
+.locationContainer{
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  gap: 10px;
+  color: crimson;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Time and Date */
+.date{
+  margin-block: 50px;
+  font-size: 30px;
+  color: #fff;
+}
+.date #time-now{
+  padding-bottom: 15px;
+}
+.date b, 
+#date1,#date2{
+  background-color: #009f35;
+  box-shadow: 0 0 5px #000;
+  text-shadow: 0 0 1px #000;
+  border-radius: 5px;
+  padding: 8px;
+}
+.seconds{
+  font-size: 14px;
+}
+
+/* TimesPrayer */
+.timesPrayer{
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 8px;
+  background-color: #508D4E;
+  color: crimson;
+}
+
+.timesPrayer>div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px 0px;
+  text-shadow: 0 0 1px #000;
+}
+
+.timesPrayer .time{
+  background-color: var(--primaryColor);
+  padding: 0 10px;
+}
+
+@media screen and (max-width:795px) {
+  h1{
+    font-size: 60px;
+  }
+  .date, .timesPrayer>div{
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width:666px) {
+  h1{
+    font-size: 50px;
+    padding-block: 10px 30px;
+    margin-bottom: 0;
+  }
+  .date{
+    font-size: 20px;
+    margin-block: 40px;
+  }
+  .date b, 
+  #date1,#date2{
+    padding: 5px;
+  }
+  .timesPrayer{
+    flex-direction: column;
+    gap: 0px;
+  }
+  .timesPrayer>div{
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 30px;
+  }
+  .timesPrayer b{
+    text-align: center;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width:350px) {
+  .date b, 
+  #date1,#date2{
+    font-size: 18px;
+  }
+}
+
